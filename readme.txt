@@ -69,3 +69,62 @@ we can do the same backwards to convert from ##!!RGB to sRGB, we can use a sligh
 close enough.
 
 answer: ##!!RGB (0, 165, 165) to sRGB = sRGB (0, 247, 247)
+
+part 3: ##!!HEX to #HEX
+disclaimer; the language surrounded the hex color space is very convoluted, im trying my best to distinguish between hexihexary and hex color space (hexidecimal color space)
+
+we already looked at how to convert #HEX to ##!!HEX, and infact we showed that technically no conversion is needed, since #00FFFF is equal to ##!!00FFFF.
+
+This is indeed a great strength of HexiHexary. The tradeoff of course is that its not feasible to convert between ##!!RGB and sRGB in your head, since you need to divide and multiple by 165 and 255 respectively. However as ive just pointed out its very easy to convert from ##!!HEX or #HEX to ##!!RGB, but now we are going to look at the inverse of that which is ##!!RGB to ##!!HEX or #HEX, which is thankfully also rather simple.
+
+we can take our example of ##!!RGB(0, 160, 160) and work out the ##!!HEX. Remember that we cant convert straight to standard #HEX, but once we convert to ##!!HEX it will be in a format that is identical to #HEX, its a little confusing to say in language so let me just show you
+
+We know that all we have to do it find the ##!!HEX of ##!!RGB(160), since 0 will stay and the blue and green channels are the same. Remember that ##!!RGB (HexiHexary RGB) only goes from 0 to 165, if we have a value like (0, 247, 247), its probably safe to assume that this is a standard rgb value and not a ##!!RGB value. Reguardless, heres how we convert ##!!160.
+
+We are going to be making use of the positional operator we defined earlier, the backtick followed by the tilde
+
+it looks like this: ~
+
+note if you try to write this in markdown you will have a bad time
+
+160 breaks down to 
+
+15~1 (15*10=150)
+
+and
+
+10~0 (10*1=10)
+
+150+10=160, that's how we check our work
+
+15 in #HEX and ##!!HEX is F
+
+10 in #HEX and ##!!HEX is A
+
+therefore ##!!RGB(0, 160, 160) = ##!!00FAFA
+
+If you're paying close attention, you may notice something slightly strange going on
+
+we have previously established that ##!!RGB(0, 160, 160) = sRGB (0, 247, 247)
+
+The problem that arises is that we can prove that this method is correct
+
+160/165=.969
+
+247/255=.968
+
+however, 247 decimal to hexidecmal is *F7*, *NOT* *FA*...
+
+the solution to this is simple if a bit confusing
+
+##!!00FAFA != #00FAFA
+
+however
+
+##!!00FAFA ≈ #00FAFA
+
+we know that this is true because our answer ##!!RGB(0, 160, 160) = ##!!00FAFA is approximately close to  ##!!RGB(0, 160, 160) = ##!!RGB(0, 247, 247), and as previously stated we can prove the ##!!RGB value is "correct" with 
+
+160/165=.969
+
+247/255=.968
