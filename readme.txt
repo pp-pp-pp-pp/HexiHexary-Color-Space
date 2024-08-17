@@ -43,3 +43,21 @@ therefore the final answer would be
 notice something? this system truly is compatible with hex and srgb, we dont need to change the code at all technically, but we *can* show it in srgb format for clarity
 
 #00FFFF = ##!!RGB(000, 165, 165)
+
+part 2: converting from sRGB() and from Hex# to DoubleHex##!!
+
+Lets take our example cyan and start with sRGB instead of Hex
+
+Cyan in sRGB = (0, 255, 255)
+to convert sRGB to HexiHexaryRGB aka ##!!RGB we can divide each channel by 255 then multiply by 165
+luckily this example is super easy
+255/255=1*165=165
+answer: sRGB (0, 255, 255) to ##!!RGB = (0, 165, 165)
+
+we can do the same backwards to convert from ##!!RGB to sRGB, we can use a slightly more complex example of ##!!RGB (if you notice, !!## is a clever way of showing that this is 'not' rgb (!=not; anyways) ##!!RGB (0, 160, 160) to sRGB = divide all by 165 then multiply by 255
+
+ this gets us 0.969696969697*255=247.27 which rounds to 247 which seems like it would make sense
+160/165=.969
+247/255=.968
+close enough.
+answer: ##!!RGB (0, 165, 165) to sRGB = sRGB (0, 247, 247)
