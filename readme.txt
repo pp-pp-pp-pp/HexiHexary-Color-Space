@@ -1,3 +1,5 @@
+developers note: this format does not play well with markdown due to its use of backtick [`] and tilde [~], im looking into this but for now im just writing this readme in txt format
+
 heres how the color space works
 
 example conversion from HEXSRGB to 'hexihexary' , potential nicknames could be 2HEX, DoubleHex, Hexary, HEXIA, reguardless, heres how it works
@@ -20,11 +22,11 @@ I need to take a moment to explain how this breakdown works, becuase it uses a n
 
 `~0 is ones place
 
-\`~1 is tens place
+`~1 is tens place
 
-\`~2 is hundreds place, and so on and so fourth
+`~2 is hundreds place, and so on and so fourth
 
-F\~1 + F~0
+F~1 + F~0
 
 F~1 = 15*10=150 (as previously discussed using `~ to denote positional information)
 
