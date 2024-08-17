@@ -128,3 +128,10 @@ we know that this is true because our answer ##!!RGB(0, 160, 160) = ##!!00FAFA i
 160/165=.969
 
 247/255=.968
+
+This is essentially the purpose of HexiHexary Color Space: is provides a way to convert between 2 "simulations" of Hex colors and RGB colors, referred to as HexiHexaryRGB (##!!RGB) and HexiHexary (##!!HEX). I can look at ##!!100 and in just a split second in my head convert it to ##A0, and back again. I cant do this with standard hexidecimal and standard rgb.
+
+I can look at ##!!BE and in just a few seconds in my head convert it to ##!!125, and take a few more seconds to check my answer using hexidecimal letters without having to multiply anything by 16 or worry about remainders
+B=11~1, E=14~0=110+14=##!!125
+
+I cant do this for standard hex and standard rgb. if i want to figure out what BE is in sRGB, I have to remember a lot of stuff. a lotttt of stuff. I don't want to think about that. with Hexihexary, I don't have to.
