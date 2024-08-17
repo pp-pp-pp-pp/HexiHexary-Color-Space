@@ -24,7 +24,7 @@ I need to take a moment to explain how this breakdown works, becuase it uses a n
 
 \`~2 is hundreds place, and so on and so fourth
 
-F~1 + F~0
+F\~1 + F~0
 
 F~1 = 15*10=150 (as previously discussed using `~ to denote positional information)
 
